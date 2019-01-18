@@ -1,0 +1,24 @@
+{
+  "name": "expensetracker",
+  "version": "1.0.0",
+  "description": "Generate APIs for Expense Tracker app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "restful",
+    "json",
+    "node",
+    "mongo",
+    "express"
+  ],
+  "author": "Niraj Dedhia",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongojs": "^2.6.0"
+  }
+}
