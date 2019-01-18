@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Amount:</ion-label>
+    <ion-input required type="number" placeholder="Amount" [(ngModel)]="expense.amount"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Date:</ion-label>
+    <ion-input required type="text" placeholder="Date" [(ngModel)]="expense.date"></ion-input>
+  </ion-item>
+  <br>
+  <button *ngIf="newExpense" ion-button round (click)="addExpense()">
+    Add Expense
+  </button>
+  <button *ngIf="!newExpense" ion-button round (click)="updateExpense()">
+    Update Expense
+  </button>
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngFor="let cat of category">
+    <ion-item (click)="goToListPage(cat)">
+      <ion-label>{{cat}}</ion-label>
+      <ion-label>{{expenses[cat] | currency}}</ion-label>
+    </ion-item>
+  </div>
+  <br>
+  <button ion-button round (click)="addNewExpense()">Add Expense</button>
+</ion-content>

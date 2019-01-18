@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngFor="let expense of expenses">
+    <ion-item (click)="goToDetailsPage(expense)">
+      <ion-label>{{expense.amount | currency}}</ion-label>
+      <ion-label>{{expense.date}}</ion-label>
+    </ion-item>
+  </div>
+</ion-content>
