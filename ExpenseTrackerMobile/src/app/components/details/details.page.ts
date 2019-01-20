@@ -13,9 +13,11 @@ export class DetailsPage implements OnInit {
 
   expense: any;
   newExpense: boolean;
+  categories: any;
 
   constructor(private router: Router, private route:ActivatedRoute, private dataStorage: DataStorageService, private location: Location) {
     this.newExpense = false;
+    this.categories = ["Travel","Grocery","Other"];
   }
 
   ngOnInit() {
@@ -25,16 +27,21 @@ export class DetailsPage implements OnInit {
       this.newExpense = true;
       console.log("Empty Expense Object");
       this.expense = {
-        "id":"",
+        "amount":null,
         "date":"",
-        "amount":0.0
+        "category":"",
+        "description":""
       };
     }
   };
 
   addExpense() {
     console.log("Add Expense");
-    this.location.back();
+    this.expense["userId"] = "5c355a7efb6fc0600bdc135d";
+    this.expense["cycle"] = "012019";
+    console.log("From Controller=>",this.expense);
+
+    //this.location.back();
   };
 
   updateExpense() {

@@ -10,8 +10,18 @@
     <ion-input required type="number" placeholder="Amount" [(ngModel)]="expense.amount"></ion-input>
   </ion-item>
   <ion-item>
+    <ion-label>Category:</ion-label>
+    <select [(ngModel)]="expense.category" >
+      <option *ngFor="let category of categories">{{category}}</option>
+    </select>
+  </ion-item>
+  <ion-item>
     <ion-label>Date:</ion-label>
-    <ion-input required type="text" placeholder="Date" [(ngModel)]="expense.date"></ion-input>
+    <ion-input required type="date" placeholder="Date" [(ngModel)]="expense.date"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Description:</ion-label>
+    <ion-input required type="textarea" placeholder="Description" [(ngModel)]="expense.description"></ion-input>
   </ion-item>
   <br>
   <button *ngIf="newExpense" ion-button round (click)="addExpense()">

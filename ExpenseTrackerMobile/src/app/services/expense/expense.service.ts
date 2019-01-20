@@ -37,15 +37,9 @@ export class ExpenseService {
   }
 
   createExpense(expenseObject): Observable<any> {
-    expenseObject = {
-      "userId":"",
-      "category":"",
-      "amount":"",
-      "date":"",
-      "cycle":"",
-      "description":""
-    }
-    return this.http.get(this.baseURL, expenseObject);
+    console.log("From Service=>",expenseObject);
+    return null;
+    // return this.http.post(this.baseURL, expenseObject);
   }
 
   getTotalPerCategory(userId, cycle): Observable<any> {

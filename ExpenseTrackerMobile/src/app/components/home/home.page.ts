@@ -26,10 +26,6 @@ export class HomePage implements OnInit {
   }
 
   ngOnInit() {
-    this.getTotalExpenses();
-  };
-
-  getTotalExpenses() {
     var userId = "5c355a7efb6fc0600bdc135d";
     var cycle = "012019";
     this.expenseService.getTotalPerCategory(userId, cycle)
